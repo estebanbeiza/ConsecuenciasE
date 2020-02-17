@@ -35,9 +35,16 @@ public class Menu {
 		System.out.print(".");
 		Thread.sleep(1000);
 		System.out.print(".\n");
-		Thread.sleep(1000);
+		Thread.sleep(1000); 
 		System.out.print("\nEscenario listo comienza el juego\n\n");
 		
+		//tab1.mostrarTablero();
+		//tab1.mostrarListaCarros();
+		//tab1.test();
+	//	tab1.lanzarHuevo();
+		//tab1.lanzarHuevo();
+		
+		//tab1.mostrarListaHuevos();
 		/* 
 		 * Menu Principal del juego
 		 */
@@ -72,42 +79,29 @@ public class Menu {
 		read.close();
 		/*
 			//tab1.lanzarHuevo();
-
 			tab1.llenarTablero(); //Llena Tablero con espacios en blanco " ";
-
 			//test crear arreglo de objetos;
 			//tab1.creaDatosKromi();
-
 			//Crea Carros tipo Kromis
 			for (int i = 1; i <= 3; i++)
 				tab1.crearCarro("K");
-
-
 			//Crea Carros tipo Trupallas
 			for (int i = 1; i <= 5; i++)
 				tab1.crearCarro("C");
-
-
 			//crea Carros tipo Trupallas
 			for (int i = 1; i <= 10; i++)
 				tab1.crearCarro("T");
-
 			//muestra tablero inicial
 			tab1.mostrarTablero();
-
 			//System.out.println(tab1.listaCarros.size());
 			//tab1.mostrarListaCarros();
-
 			//Comienza el lanzamiento de huevos
 			tab1.lanzarHuevo();
 			tab1.lanzarHuevo();
 			tab1.lanzarHuevo();
-
 			tab1.mostrarTablero();
 			tab1.mostrarListaCarros();
 			tab1.mostrarListaHuevos();
-
-
 		}
 */
 		

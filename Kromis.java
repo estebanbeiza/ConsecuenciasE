@@ -1,10 +1,9 @@
-
 package PConsecuencias;
 
 public class Kromis extends Carro {
 	private String anoFabricacion;
 	private String marca;
-	private int vida;
+	
 	
 	Kromis() {
 		super();
@@ -15,7 +14,6 @@ public class Kromis extends Carro {
 		super(cantidadOcupantes, fechaIngreso, fila, columna);
 		this.anoFabricacion = anoFabricacion;
 		this.marca = marca;
-		this.vida = 3;
 	}
 
 	public String getAnoFabricacion() {
@@ -34,18 +32,11 @@ public class Kromis extends Carro {
 		this.marca = marca;
 	}
 
-	public int getVida() {
-		return vida;
-	}
 
-	public void setVida(int vida) {
-		this.vida = vida;
-	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "Kromis [anoFabricacion=" + anoFabricacion + ", marca=" + marca 
-				+ /*", vida=" +*/ vida + "]";
+		return super.toString() + "Kromis [anoFabricacion=" + anoFabricacion + ", marca=" + marca  + "]";
 	}
 	
 	

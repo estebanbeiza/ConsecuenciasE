@@ -1,4 +1,3 @@
-
 package PConsecuencias;
 
 import java.util.List;
@@ -8,21 +7,21 @@ import java.util.Scanner;
 public class Tablero {
 	List<Carro> listaCarros;
 	List<Huevo> listaHuevos;
-	List<Kromis> listaKromis;
+/*	List<Kromis> listaKromis;
 	List<Caguanos> listaCaguanos;
 	List<Trupallas> listaTrupallas;
-	
+	*/
 	String[][] tablero = new String[15][15];
-	String[][] tablero2 = new String[7][5];
-	int contK = 0, contC = 0, contT = 0, contA = 0, contH;
+	//String[][] tablero2 = new String[7][5];
+	int contK = 0, contC = 0, contT = 0, contA = 0, contH=0;
 	
  	
 	Tablero() {
 		this.listaCarros = new ArrayList<Carro>();
 		this.listaHuevos = new ArrayList<Huevo>();
-		this.listaKromis = new ArrayList<Kromis>();
+	/*	this.listaKromis = new ArrayList<Kromis>();
 		this.listaCaguanos = new ArrayList<Caguanos>();
-		this.listaTrupallas = new ArrayList<Trupallas>();
+		this.listaTrupallas = new ArrayList<Trupallas>();*/
 	}
 	
 	/* 
@@ -125,15 +124,15 @@ public class Tablero {
 			if (tipoCarro == "K") {
 				Kromis krom1 = new Kromis(6, "16-06-2016", fil, col,"2015", "Nissan");
 				listaCarros.add(krom1);
-				listaKromis.add(krom1);
+				//listaKromis.add(krom1);
 			} else if (tipoCarro == "C" ) {
 				Caguanos cagua1 = new Caguanos(4, "20-04-2020", fil, col, 3, "red");
 				listaCarros.add(cagua1);
-				listaCaguanos.add(cagua1);
+			//	listaCaguanos.add(cagua1);
 			} else {
 				Trupallas trup1 = new Trupallas(4, "11-11-2019", fil, col, 5, "Jacob");
 				listaCarros.add(trup1);
-				listaTrupallas.add(trup1);
+				//listaTrupallas.add(trup1);
 			}
 			
 		}	
@@ -143,6 +142,8 @@ public class Tablero {
 	public void mostrarListaCarros() {
 		for(Carro e: listaCarros) {
 			System.out.println(e);
+			//listaCarros.get
+
 		}
 	}
 	
@@ -198,24 +199,24 @@ public class Tablero {
 		//read.close();
 
 
-		//System.out.println("antes del puntaje " + h1.toString());
+	
 		//Luego del lanzamiento comprobamos si dio en el blanco
 		//y ademas si destruyo el vehiculo por completo
 		if (tablero[fil][col] == "K") {
 			System.out.println("Lanzamiento acertado (K)");
 			contA++;
-			puntaje = 3 + validarVida(fil, col, "K");
-			if (validarVida(fil, col, "K") > 0) {
+			puntaje = 3 + validarVida2(fil, col, "K");
+			if (validarVida2(fil, col, "K") > 0) {
 				contK++;
 				System.out.println("Kromi destruida");
 			}
 		} else if (tablero[fil][col] == "C") {
 			System.out.println("Lanzamiento acertado (C)");
 			contA++;
-			puntaje = 2 + validarVida(fil, col, "C");
-			if (validarVida(fil, col, "C") > 0) {
+			puntaje = 2 + validarVida2(fil, col, "C");
+			if (validarVida2(fil, col, "C") > 0) {
 				contC++;
-				System.out.println("Caguano destruida");
+				System.out.println("Caguano destruido");
 			}
 		} else if (tablero[fil][col] == "T") {
 			System.out.println("Lanzamiento acertado (T)");
@@ -242,6 +243,95 @@ public class Tablero {
 		listaHuevos.add(h1);
 	}
 	
+	public void test() {
+		for (Carro e: listaCarros) {
+			System.out.println(e.getClass().toString());
+			if (e.getClass().toString().contentEquals("class PConsecuencias.Kromis")) {
+				System.out.println("Entro");
+			}
+			
+			
+		}
+	}
+	
+	public int validarVida2 (int fil, int col, String tipo) {
+		int puntos = 0;
+		
+		//System.out.println("mato un tipo K");
+		for (Carro e: listaCarros) {
+			if (tipo == "K") {
+				if (e.getClass().toString().contentEquals("class PConsecuencias.Kromis")) {
+					if (e.getColumna() == col) {
+						if (e.getFila() == fil) {
+							if (tablero[fil+1][col] != "K" 
+									&& tablero[fil+2][col] != "K") {
+								puntos = 10;
+								//System.out.println("Kromi Destruida 1");
+							}
+						} else if ((fil - e.getFila()) == 1) {
+							if (tablero[fil-1][col] != "K"
+									&& tablero[fil+1][col] != "K") {
+								puntos = 10;
+								//System.out.println("Kromi Destruida 2");
+							}
+
+						} else if ((fil - e.getFila()) == 2) {
+							if (tablero[fil-1][col] != "K" 
+									&& tablero[fil-2][col] != "K") {
+								puntos = 10;
+								//System.out.println("Kromi Destruida 3");
+							}
+						} 
+					}
+				} 
+			} else if (tipo =="C") {
+				if (e.getClass().toString().contentEquals("class PConsecuencias.Caguanos")) {
+					if (e.getFila() == fil) {
+						if (e.getColumna() == col) {
+							if (tablero[fil][col+1] != "C") {
+								puntos = 7;
+								//System.out.println("Caguano Destruido 1");
+							}				
+						} else if ((col - e.getColumna()) == 1) {
+							if (tablero[fil][col-1] != "C") {
+								puntos = 7;
+								//System.out.println("Caguano Destruido 2");
+							}
+						}
+
+					}
+				}
+				
+			} //fin si tipo == "C" o "K"
+
+
+		} //fin for
+
+			
+		 /*else if (tipo == "C") {
+			//System.out.println("mato un tipo C");
+			for (Caguanos e: listaCaguanos) {
+				if (e.getFila() == fil) {
+					if (e.getColumna() == col) {
+						if (tablero[fil][col+1] != "C") {
+							puntos = 7;
+							//System.out.println("Caguano Destruido 1");
+						}				
+					} else if ((col - e.getColumna()) == 1) {
+						if (tablero[fil][col-1] != "C") {
+							puntos = 7;
+							//System.out.println("Caguano Destruido 2");
+						}
+					}
+						
+				}
+			}
+			
+		} */
+		return puntos;
+	}
+	
+	/*
 	public int validarVida (int fil, int col, String tipo) {
 		int puntos = 0;
 		if (tipo == "K") {
@@ -294,6 +384,7 @@ public class Tablero {
 		} 
 		return puntos;
 	}
+	*/
 	
 	public void calcularPuntaje () {
 		System.out.println("Puntaje de Lanzamientos: " + puntajeLanzamiento());

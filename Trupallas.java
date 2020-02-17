@@ -1,4 +1,3 @@
-
 package PConsecuencias;
 
 public class Trupallas extends Carro {

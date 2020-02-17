@@ -1,4 +1,3 @@
-
 package PConsecuencias;
 
 import java.util.Arrays;
@@ -6,7 +5,6 @@ import java.util.Arrays;
 public class Caguanos extends Carro {
 	private int alcanceTiro;
 	private String colorConfeti;
-	private int[] vida = new int[2];
 	
 	Caguanos () {
 		super();
@@ -17,8 +15,6 @@ public class Caguanos extends Carro {
 		super(cantidadOcupantes, fechaIngreso, fila, columna);
 		this.alcanceTiro = alcanceTiro;
 		this.colorConfeti = colorConfeti;
-		this.vida[0] = columna;
-		this.vida[1] = columna + 1;
 	}
 
 	public int getAlcanceTiro() {
@@ -40,7 +36,7 @@ public class Caguanos extends Carro {
 	@Override
 	public String toString() {
 		return super.toString() + " Caguanos [alcanceTiro=" + alcanceTiro + ", colorConfeti=" 
-				+ colorConfeti + ", vida=" + Arrays.toString(vida) + "]";
+				+ colorConfeti + "]";
 	}
 	
 	
