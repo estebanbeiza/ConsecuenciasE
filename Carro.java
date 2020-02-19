@@ -2,21 +2,21 @@ package PConsecuencias;
 
 /**
  * 
- * Esta clase contiene los atributos y mÈtodos pertenecientes a la clase Carro
- * Y ser· usada como Clase Padre
+ * Esta clase contiene los atributos y m√©todos pertenecientes a la clase Carro
+ * Y ser√° usada como Clase Padre
  * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/escribir direccion del github contenedor">VersiÛn en Github</a>
+ * @see <a href="https://github.com/escribir direccion del github contenedor">Versi√≥n en Github</a>
  *
  */
 
 public class Carro {
-	
 	//Atributos de la clase
 	private int cantidadOcupantes;
 	private String fechaIngreso;
 	private int fila;
 	private int columna;
+	
 	
 	/**
 	 *
@@ -26,13 +26,13 @@ public class Carro {
 	 * @param fila Coordenada de fila en tablero
 	 * @param columna Coordenada de columna en tablero
 	 */
-	
 	Carro () {
 		this.cantidadOcupantes = 0;
 		this.fechaIngreso = "";
 		this.fila = 0;
 		this.columna = 0;
 	}
+	
 	
 	/**
 	 *
@@ -42,15 +42,13 @@ public class Carro {
 	 * @param fila Coordenada de fila en tablero
 	 * @param columna Coordenada de columna en tablero
 	 */
-	
-	public Carro(int cantidadOcupantes, String fechaIngreso, int fila, int columna) {
+	Carro(int cantidadOcupantes, String fechaIngreso, int fila, int columna) {
 		this.cantidadOcupantes = cantidadOcupantes;
 		this.fechaIngreso = fechaIngreso;
 		this.fila = fila;
 		this.columna = columna;
 	}
 
-	
 	public int getCantidadOcupantes() {
 		return cantidadOcupantes;
 	}
