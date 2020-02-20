@@ -11,7 +11,7 @@ import java.util.Scanner;
  * En ella se declaran las instancias de las clases y se prueban sus métodos 
  * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/escribir direccion del github contenedor">Versión en Github</a>
+ * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Versión en Github</a>
  *
  */
 

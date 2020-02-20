@@ -5,7 +5,7 @@ package PConsecuencias;
  * Clase Aleatorio genera un numero aleatorio desde 0 hasta el rango que se le indique
  * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/escribir direccion del github contenedor">Versión en Github</a>
+ * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Versión en Github</a>
  *
  */
 public class Aleatorio {
