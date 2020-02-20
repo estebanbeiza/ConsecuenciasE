@@ -2,11 +2,11 @@ package PConsecuencias;
 
 /**
  * 
- * Esta clase contiene los atributos y métodos pertenecientes a la clase Trupallas
+ * Esta clase contiene los atributos y metodos pertenecientes a la clase Trupallas
  * hereda la clase Carros
- * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
+ * @author: Esteban Beiza / Nadia Rojas / Pamela Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Versión en Github</a>
+ * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Version en Github</a>
  *
  */
 public class Trupallas extends Carro {

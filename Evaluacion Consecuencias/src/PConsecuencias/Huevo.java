@@ -2,11 +2,11 @@ package PConsecuencias;
 
 /**
  * 
- * Esta clase contiene los atributos y métodos pertenecientes a la clase Huevo
+ * Esta clase contiene los atributos y metodos pertenecientes a la clase Huevo
  * se usara para registrar los lanzamientos con su posicion y puntaje respectivo
- * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
+ * @author: Esteban Beiza / Nadia Rojas / Pamela Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Versión en Github</a>
+ * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Version en Github</a>
  *
  */
 

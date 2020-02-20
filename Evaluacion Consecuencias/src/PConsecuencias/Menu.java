@@ -4,10 +4,10 @@ import java.util.*;
 /**
  * 
  * Esta es la clase que realiza las acciones
- * se declara la instancia de la clase Tablero y se prueban sus métodos 
- * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
+ * se declara la instancia de la clase Tablero y se prueban sus metodos 
+ * @author: Esteban Beiza / Nadia Rojas / Pamela Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/escribir direccion del github contenedor">Versión en Github</a>
+ * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Version en Github</a>
  *
  */
 public class Menu {
@@ -30,8 +30,8 @@ public class Menu {
 		Scanner read = new Scanner(System.in);
 		do {
 			System.out.println("Seleccione:");
-			System.out.println("1.- Creación de tablero Manual");
-			System.out.println("2.- Creación de tablero Automático");
+			System.out.println("1.- Creacion de tablero Manual");
+			System.out.println("2.- Creacion de tablero Automatico");
 			op2 = read.nextInt();
 		} while (op2 < 1 || op2 > 2);
 		
@@ -102,7 +102,7 @@ public class Menu {
 				tab1.mostrarListaHuevos();
 				break;
 			case 6:
-				System.out.println("\n Gracias por jugar vuelve pronto");
+				System.out.println("\n Gracias por jugar, vuelve pronto");
 				break;
 			default:
 				break;	

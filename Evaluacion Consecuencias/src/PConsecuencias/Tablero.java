@@ -9,9 +9,9 @@ import java.util.Scanner;
  * 
  * Esta es la clase que se utiliza para crear el tablero del juego
  * En ella se declaran las instancias de las clases y se prueban sus métodos 
- * @author: Esteban Beiza / Nadia Rojas / Pamerla Bustos.
+ * @author: Esteban Beiza / Nadia Rojas / Pamela Bustos.
  * @version: 19/02/2020
- * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Versión en Github</a>
+ * @see <a href="https://github.com/estebanbeiza/ConsecuenciasE.git">Version en Github</a>
  *
  */
 
@@ -77,7 +77,7 @@ public class Tablero {
 		do {
 			System.out.println("ingrese cantidad de ocupantes");
 			int cantocupantes = leer.nextInt();
-			System.out.println("ingrese año de ingreso");
+			System.out.println("ingrese a�o de ingreso");
 			String anoingreso = leer.next();
 			System.out.println("Ingrese tipo de carro (kromi | caguano | trupalla");
 			String tipocarro=leer.next();
@@ -91,7 +91,7 @@ public class Tablero {
 					//System.out.println("ingrese a crear kromi");
 					if (contaK<3) {
 						seguir= validarTablero (fila,columna,tipocarro);
-						System.out.println("seguir " + seguir);
+						
 						if (seguir==false) {
 							Kromis kromi1=new Kromis(cantocupantes, anoingreso, fila, columna);
 							listaCarros.add(kromi1);
@@ -152,8 +152,7 @@ public class Tablero {
 					break;
 				}
 			}
-			System.out.println("contaK=" + contaK + ", contaC=" + contaC + ", contaT="+contaT 
-					+ ", contaG=" + contaG);
+			
 			mostrarTableroManual();
 		}while (contaG<18);
 	}
@@ -382,7 +381,7 @@ public class Tablero {
 	
 	/**
 	 * Metodo valida si un Carro del Tablero fue destruido
-	 * si es así retorna el puntaje respectivo
+	 * si es asi retorna el puntaje respectivo
 	 */
 	public int validarVidaCarro (int fil, int col, String tipo) {
 		int puntos = 0;
